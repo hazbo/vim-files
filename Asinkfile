@@ -28,9 +28,22 @@
 			],
 			"group" : "move-files"
 		},
-		"start-vim" : {
-			"command" : "vim",
-			"require" : "move-runtime-files"
+		"install-awesome-vim" : {
+			"dir"     : "~/.vim_runtime/",
+			"command" : "sh",
+			"args"    : [
+				"install_awesome_vimrc.sh"
+			],
+			"require" : "move-vimrc-file"
+		},
+		"clean-up" : {
+			"dir"     : "~",
+			"command" : "rm",
+			"args"    : [
+				"-rf",
+				"hazbo-vim"
+			],
+			"require" : "install-awesome-vim"
 		}
 	}
 }
