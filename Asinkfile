@@ -1,21 +1,26 @@
 {
 	"tasks" : {
 		"clone-dot-files" : {
-			"dir" : "~",
+			"dir" 	  : "~",
 			"command" : "git",
-			"args" : [
+			"args"    : [
 				"clone",
-				"url",
+				"https://github.com/hazbo/vim-files.git",
 				"hazbo-vim"
 			]
 		},
 		"move-runtime-files" : {
-			"dir" : "~/hazbo-vim",
+			"dir" 	  : "~/hazbo-vim",
 			"command" : "mv",
-			"args" : [
+			"args" 	  : [
 				".vim_runtime",
 				"../.vim_runtime"
-			]
+			],
+			"require" : "clone-dot-files"
+		},
+		"start-vim" : {
+			"command" : "vim",
+			"require" : "move-runtime-files"
 		}
 	}
 }
