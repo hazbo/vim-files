@@ -1,0 +1,21 @@
+{
+	"tasks" : {
+		"clone-dot-files" : {
+			"dir" : "~",
+			"command" : "git",
+			"args" : [
+				"clone",
+				"url",
+				"hazbo-vim"
+			]
+		},
+		"move-runtime-files" : {
+			"dir" : "~/hazbo-vim",
+			"command" : "mv",
+			"args" : [
+				".vim_runtime",
+				"../.vim_runtime"
+			]
+		}
+	}
+}
