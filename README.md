@@ -8,8 +8,16 @@ You can clone this down and use the install script which just
 moves the configuration files for you, or you could just
 install using [Asink](http://github.com/groundsix/asink).
 
+Make sure your GOPATH is set:
+
 ```bash
-asink get https://raw.githubusercontent.com/hazbo/vim-files/master/Asinkfile
+$ export GOPATH=$HOME/go
+```
+
+```bash
+$ asink get https://raw.githubusercontent.com/hazbo/vim-files/master/Asinkfile
 ```
 
 This will grab all the files, install and then clean up after itself.
+
+Starting `vim` will install any missing Go dependencies.
