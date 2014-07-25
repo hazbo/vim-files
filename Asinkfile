@@ -16,7 +16,17 @@
 				".vim_runtime",
 				"../.vim_runtime"
 			],
-			"require" : "clone-dot-files"
+			"require" : "clone-dot-files",
+			"group" : "move-files"
+		},
+		"move-vimrc-file" : {
+			"dir" 	  : "~/hazbo-vim",
+			"command" : "mv",
+			"args"    : [
+				".vimrc",
+				"../.vimrc"
+			],
+			"group" : "move-files"
 		},
 		"start-vim" : {
 			"command" : "vim",
