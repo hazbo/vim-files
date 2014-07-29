@@ -1,15 +1,5 @@
 {
 	"tasks" : {
-		"remove-old-files" : {
-			"dir"     : "~",
-			"command" : "rm",
-			"args"    : [
-				"-rf",
-				".vim_runtime",
-				".viminfo",
-				".vimrc"
-			]
-		},
 		"clone-dot-files" : {
 			"dir" 	  : "~",
 			"command" : "git",
