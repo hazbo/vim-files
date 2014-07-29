@@ -1,5 +1,15 @@
 {
 	"tasks" : {
+		"remove-old-files" : {
+			"dir"     : "~",
+			"command" : "rm",
+			"args"    : [
+				"-rf",
+				".vim_runtime",
+				".viminfo",
+				".vimrc"
+			]
+		},
 		"clone-dot-files" : {
 			"dir" 	  : "~",
 			"command" : "git",
@@ -7,7 +17,8 @@
 				"clone",
 				"https://github.com/hazbo/vim-files.git",
 				"hazbo-vim"
-			]
+			],
+			"require" : "remove-old-files"
 		},
 		"move-runtime-files" : {
 			"dir" 	  : "~/hazbo-vim",
@@ -17,7 +28,7 @@
 				"../.vim_runtime"
 			],
 			"require" : "clone-dot-files",
-			"group" : "move-files"
+			"group"   : "move-files"
 		},
 		"move-vimrc-file" : {
 			"dir" 	  : "~/hazbo-vim",
